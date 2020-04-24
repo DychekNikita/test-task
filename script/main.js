@@ -91,23 +91,21 @@ tbody.addEventListener("click", (event) => {
 });
 deleteButton.addEventListener("click", () => {
   if (tr.classList.contains("item-to-edit")) {
-    tr.classList.add("deleted");
     let deletedArr = table.filter((tr) => {
       itemsToDelete.forEach(function (item) {
-        for (let i = 0; i < table.length; i++) {
+        for (let i = 0; i <= table.length; i++) {
           if (i == item.id) {
             localStorage.getItem("table");
-            table.splice(i, 1);
             item.classList.add("deleted");
+            table.splice(i, 1);
             localStorage.setItem("table", JSON.stringify(table));
-            //localStorage.setItem('data', JSON.stringify(table));
           }
         }
       });
     });
   }
+  window.location.reload();
 });
-
 function toggleModal() {
   modal.classList.toggle("is-open");
 }
