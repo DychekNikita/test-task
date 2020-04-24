@@ -61,6 +61,7 @@ function addRow() {
 
 };
 addButton.addEventListener('click', () => {
+    if (newRow !== '') {
     let newRow = {
         name: addFullName.value,
         adress: addAdress.value,
@@ -72,6 +73,7 @@ addButton.addEventListener('click', () => {
     addFullName.value='';
     addAdress.value = '';
     addPhone.value ='';
+};
   });
 //добавление в массив строк, предназначенных для удаления и редактирования
 let tr = '';
