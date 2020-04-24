@@ -115,6 +115,7 @@ editButton.addEventListener("click", () => {
     document.querySelectorAll(".item-to-edit").length > 1
   ) {
     alert("Пожалуйста, выберите один элемент для редактирования!");
+    window.location.reload();
   } else {
     toggleModal();
     table.filter((tr) => {
