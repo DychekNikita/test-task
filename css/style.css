@@ -3,8 +3,16 @@ table {
     table-layout: fixed;
     width: 100%;
   }
+  
   td, th {
     width: 2%;
+  }
+
+  .buttons {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
   }
 
   .btn {
@@ -12,10 +20,15 @@ table {
   }
 
   .btn-block{
-      width: 600px;
+      width: 145px;
       max-width: 70%;
-      margin: auto;
+      margin-right: 10px;
+      margin-top: 0;
   }
+
+  .btn-block+.btn-block {
+    margin-top: 0;
+}
 
   .item-to-edit {
       background-color: grey;
